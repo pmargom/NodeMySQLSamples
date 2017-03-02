@@ -1,5 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1= "Audio Libros"
+  p Welcome to #{"Audio Libros"}
+  ul#data
+  li: a(href="api/v1/data", target="_BLANK") Show Books data
+  
