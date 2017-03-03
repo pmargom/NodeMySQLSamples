@@ -5,4 +5,13 @@ block content
   p Welcome to #{"Audio Libros"}
   ul#data
   li: a(href="api/v1/data", target="_BLANK") Show Books data
-  
+  li: a(href="api/v1/json-samples", target="_BLANK") iTunes Books data sample
+  li: a(href="api/v1/itunes/?q=u2", target="_BLANK") iTunes searching U2 sample
+  div
+    form(action='/api/v1/itunes', method='get', target="_blank")
+      div(data-role='fieldcontain')
+        fieldset(data-role='controlgroup')
+          label(for='searchText') serch
+          input(id='term',type='text', value='', name='term', placeholder='type anything...')          
+      div(data-role='fieldcontain')
+        input(id='search',type='submit',value='search')

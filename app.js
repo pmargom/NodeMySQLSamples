@@ -9,6 +9,8 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var dataApi = require('./api/data');
+var jsonSamplesApi = require('./api/json-samples');
+var itunesApi = require('./api/itunes');
 
 var app = express();
 
@@ -29,6 +31,8 @@ app.use('/users', users);
 
 // api
 app.use('/api/v1/data', dataApi());
+app.use('/api/v1/json-samples', jsonSamplesApi());
+app.use('/api/v1/itunes', itunesApi());
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
