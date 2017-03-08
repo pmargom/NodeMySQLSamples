@@ -8,7 +8,9 @@ module.exports = function() {
     router.get('/', function(req, res, next) {
         
         var term = req.query.term || '';
-        var url = util.format('https://itunes.apple.com/search?term=%s&limit=%s&entity=%s&', term,10,'ebook');
+        //var url = util.format('https://itunes.apple.com/search?term=%s&limit=%s&entity=%s&', term,10,'ebook');
+        //var url = util.format('https://itunes.apple.com/search?term=%s&limit=%s&entity=%s', term,10,'all');
+        var url = util.format('https://itunes.apple.com/search?term=%s&limit=%s', term,10);
         console.log(url);
         
         service.get(url)
